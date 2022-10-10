@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtResultMain"
+        android:layout_width="164dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="81dp"
+        android:textAlignment="textStart"
+        android:textSize="24dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgCurr2Main"
+        app:layout_constraintTop_toBottomOf="@+id/txtToMain" />
+
+    <Spinner
+        android:id="@+id/spnrCurrency1Main"
+        android:layout_width="164dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="220dp"
+        android:entries="@array/Currencies"
+        app:layout_constraintBottom_toTopOf="@+id/spnrCurrency2Main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtChangeFromMain"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtChangeFromMain"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="96dp"
+        android:text="Change from"
+        app:layout_constraintBottom_toTopOf="@+id/etChangeFromMain"
+        app:layout_constraintEnd_toStartOf="@+id/spnrCurrency1Main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCurrencyMain" />
+
+    <TextView
+        android:id="@+id/txtToMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="74dp"
+        android:text="Change to"
+        app:layout_constraintBottom_toTopOf="@+id/txtResultMain"
+        app:layout_constraintEnd_toStartOf="@+id/spnrCurrency2Main"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etChangeFromMain" />
+
+    <TextView
+        android:id="@+id/txtCurrencyMain"
+        android:layout_width="175dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginBottom="126dp"
+        android:text="Currency Converter"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtChangeFromMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <EditText
+        android:id="@+id/etChangeFromMain"
+        android:layout_width="174dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="105dp"
+        android:ems="10"
+        android:hint="Enter amount"
+        android:inputType="number|numberDecimal"
+        android:minHeight="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtToMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgCurr1Main"
+        app:layout_constraintTop_toBottomOf="@+id/txtChangeFromMain" />
+
+    <Spinner
+        android:id="@+id/spnrCurrency2Main"
+        android:layout_width="167dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="193dp"
+        android:entries="@array/Currencies"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtToMain"
+        app:layout_constraintTop_toBottomOf="@+id/spnrCurrency1Main" />
+
+    <ImageView
+        android:id="@+id/imgCurr1Main"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etChangeFromMain"
+        app:layout_constraintEnd_toStartOf="@+id/etChangeFromMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etChangeFromMain"
+        app:srcCompat="@drawable/shekel" />
+
+    <ImageView
+        android:id="@+id/imgCurr2Main"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtResultMain"
+        app:layout_constraintEnd_toStartOf="@+id/txtResultMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/shekel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
